@@ -1,0 +1,138 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+\usepackage{xunicode, xltxtra}
+\XeTeXlinebreaklocale "zh"
+\widowpenalty=10000
+
+%\setmainfont[Mapping=tex-text]{文泉驿正黑}
+
+% character encoding
+%\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{CJKutf8}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+%\setmainfont[Mapping=tex-text]{微软雅黑}
+\setmainfont[Mapping=tex-text]{文泉驿微米黑}
+\setsansfont[Mapping=tex-text]{微软雅黑}
+% \setsansfont[Mapping=tex-text]{Hiragino Sans GB}
+\CJKtilde
+
+% personal data
+
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% 个人信息
+\firstname{骆}
+\familyname{克云}
+\title{个人简历}                      % 可选项、如不需要可删除本行
+\address{南京市仙林大道163号}{210046 江苏南京}             % 可选项、如不需要可删除本行
+\mobile{+86~18115128082}                         % 可选项、如不需要可删除本行
+%\phone{+2~(345)~678~901}                          % 可选项、如不需要可删除本行
+%\fax{+3~(456)~789~012}                            % 可选项、如不需要可删除本行
+\email{streamer.ky@foxmail.com}                    % 可选项、如不需要可删除本行
+%\homepage{keyunluo.github.io}                  % 可选项、如不需要可删除本行
+%\extrainfo{附加信息 (可选项)}                  % 可选项、如不需要可删除本行
+\photo[64pt]{pic.jpg}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+%\quote{引言(可选项)}                           % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{教育背景}
+\cventry{2016 -- 2019}{研究生}{南京大学}{计算机科学与技术系} {分布式计算研究组}{}
+\cventry{2012 -- 2016}{本科}{南京航空航天大学}{计算机科学与技术学院}{计算机软件培优班}{}
+
+
+\section{研究方向}
+\cventry{研究方向}{分布计算与并行处理}{分布式计算平台Spark的性能优化}{大数据处理}{}{}
+\cvitem{本科毕业设计}{\emph{基于HDFS的大数据存储系统的设计与实现}}
+\cvitem{指导老师}{刘亮，叶保留}
+\cvitem{说明}{\small 本毕设研究使用Spark编写的BulkLoad模块将HDFS中的数据快速复制到HBase中，同时在Elasticsearch中建立索引同步机制。}
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+\section{论文}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+\section{社区}
+\cventry{Blog}{\url{https://keyunluo.github.io}}{技术博客}{记录、总结日常学习的知识点}{}{}
+\cventry{GitHub}{\url{https://github.com/keyunluo}}{参与和创建过多个开源项目}{}{}{}
+%\cventry{StackOverflow}{\url{http://stackoverflow.com/users/1983467/dinever}}{}{}{}{}
+
+\section{项目经历}
+\renewcommand{\baselinestretch}{1.2}
+
+\cventry{2016}
+{网页批量注册信息}
+{Python/Tesseract/curl}
+{个人项目}{}
+{采用正则表达式/XPath搜索指定信息，使用Pycurl发送信息，使用Tesseract训练并识别验证码。}
+
+\cventry{2015}
+{政府采购网爬虫项目}
+{Python/Scrapy/PyQt/MongoDB}
+{团队项目}{}
+{采用Python下的Scrapy爬虫框架编写了一个上海市政府采购网招标信息爬取程序，数据存储在MongoDB中，使用PyQt编写界面，可实现数据采集和简单查询。}
+
+\cventry{2014--2015}
+{基于图像识别的邮件清单分拣系统}
+{C++/MFC}
+{大学生创新项目 团队项目}{}
+{作为团队负责人，设计并实现了对快递业邮件清单的图像处理、分析系统，使用Tesseract进行文字识别，使用MFC并进行界面美化。}
+
+
+\section{语言技能}
+\cvline{英语}{\textbf{CET-6: 487}，擅长读写，经常阅读英文论文、教程。}
+\cvline{普通话}{母语}
+
+\section{计算机技能}
+\cvline{编程语言}{Python，Java，Scala，C，C++}
+\cvline{数据库}{HBase，MySQL}
+\cvline{大数据平台}{Spark，Hadoop，Flink，Kudu}
+
+
+\section{荣誉} % (fold)
+\cvitem{2016}{三好学生}
+\cvitem{2015}{校第三届嵌入式比赛二等奖，第二届PLD电子系统设计竞赛二等奖}
+\cvitem{2014}{院第三届科创基金项目一等奖，校第九届程序设计比赛二等奖}
+\cvitem{2013}{优秀学生二等奖学金，校首届高等数学竞赛二等奖}
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
