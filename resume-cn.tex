@@ -65,10 +65,10 @@
 
 
 \section{研究方向}
-\cventry{研究方向}{分布计算与并行处理}{分布式计算平台Spark的性能优化}{大数据处理}{}{}
-\cvitem{本科毕业设计}{\emph{基于HDFS的大数据存储系统的设计与实现}}
-\cvitem{指导老师}{刘亮，叶保留}
-\cvitem{说明}{\small 本毕设研究使用Spark编写的BulkLoad模块将HDFS中的数据快速复制到HBase中，同时在Elasticsearch中建立索引同步机制。}
+\cventry{研究方向}{分布式键值对存储}{数据挖掘技术在存储系统中的应用}{}{}{}
+\cvitem{说明}{\small 课题组主要从事分布式计算和分布式系统相关的研究工作,本人主要从事分布式Key-Value Store(NoSQL)的性能优化,包括基于预测技术的文件热度预测与数据智能分布,分布式分层存储以及基于LSM Tree的写放大优化。}
+\cvitem{本科毕设}{\emph{基于HDFS的大数据存储系统的设计与实现}}
+\cvitem{说明}{\small 本毕设研究使用Spark编写的BulkLoad模块将HDFS中的数据快速复制到HBase中，同时在Elasticsearch中建立二级索引同步机制。}
 
 % 来自BibTeX文件但不使用multibib包的出版物
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
@@ -77,7 +77,7 @@
 \bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
 
 % 来自BibTeX文件并使用multibib包的出版物
-\section{论文}
+%\section{论文}
 %\nocitebook{book1,book2}
 %\bibliographystylebook{plain}
 %\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
@@ -93,36 +93,35 @@
 \section{项目经历}
 \renewcommand{\baselinestretch}{1.2}
 
+\cventry{2017}
+{基于路侧雷达定位技术的行人车辆碰撞预警算法研究}
+{Python}
+{校企合作项目 数据挖掘}{}
+{作为负责人,主要利用合作企业提供的路侧雷达采集到的定位数据进行回归分析,给出行人在道路口与车辆发生碰撞的概率与危险等级,使用定向喇叭警告减少盲区事故。}
+
 \cventry{2016}
 {网页批量注册信息}
 {Python/Tesseract/curl}
-{个人项目}{}
-{采用正则表达式/XPath搜索指定信息，使用Pycurl发送信息，使用Tesseract训练并识别验证码。}
+{个人项目 网站爬虫}{}
+{采用正则表达式/XPath搜索指定信息，使用Pycurl发送信息，使用Tesseract训练并识别验证码,批量注册用户。}
 
-\cventry{2015}
-{政府采购网爬虫项目}
-{Python/Scrapy/PyQt/MongoDB}
-{团队项目}{}
-{采用Python下的Scrapy爬虫框架编写了一个上海市政府采购网招标信息爬取程序，数据存储在MongoDB中，使用PyQt编写界面，可实现数据采集和简单查询。}
 
 \cventry{2014--2015}
 {基于图像识别的邮件清单分拣系统}
 {C++/MFC}
-{大学生创新项目 团队项目}{}
+{大学生创新项目 团队项目 图像处理}{}
 {作为团队负责人，设计并实现了对快递业邮件清单的图像处理、分析系统，使用Tesseract进行文字识别，使用MFC并进行界面美化。}
 
 
-\section{语言技能}
+\section{语言与计算机技能}
 \cvline{英语}{\textbf{CET-6: 487}，擅长读写，经常阅读英文论文、教程。}
-\cvline{普通话}{母语}
-
-\section{计算机技能}
-\cvline{编程语言}{Python，Java，Scala，C，C++}
+\cvline{编程语言}{Python，C/C++，Java/Scala}
 \cvline{数据库}{HBase，MySQL}
-\cvline{大数据平台}{Spark，Hadoop，Flink，Kudu}
+\cvline{大数据平台}{Spark，Hadoop，Flink}
 
-
-\section{荣誉} % (fold)
+\section{奖励 \& 荣誉} % (fold)
+\cvitem{2017}{华为软件精英挑战赛江山赛区二等奖}
+\cvitem{2016}{研究生一等奖学金}
 \cvitem{2016}{三好学生}
 \cvitem{2015}{校第三届嵌入式比赛二等奖，第二届PLD电子系统设计竞赛二等奖}
 \cvitem{2014}{院第三届科创基金项目一等奖，校第九届程序设计比赛二等奖}
@@ -131,6 +130,10 @@
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
+
+\section{个人说明}
+\cvline{研究兴趣}{热爱计算机前沿技术,对大数据处理平台的底层架构、分布式技术尤为感兴趣,对数据挖掘技术有一定了解,并尝试将其应用到分布式系统中以改善系统性能;对新兴的分布式深度学习系统兴趣强烈,阅读过Tensorflow源码;对复杂网络流理论熟悉,并通过比赛对带约束的凹费用流问题的搜索算法有一个初步的了解。}
+\cvline{意向职位}{分布式存储系统/云计算/复杂网络优化/数据挖掘}
 
 \end{document}
 
